@@ -41,7 +41,7 @@ public with sharing class ControllerAnimal {
         if (insertedAnimals != null && insertedAnimals.size() > 0) {
             String str = 'Insert success ' + insertedAnimals.size() + ' animal ' + insertedAnimals;
             String subject = 'Animal insert';
-            String body = str.replaceAll('[{}():]|Animal__c', '');
+            String body = str.replaceAll('Animal__c', '');
             Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage(); 
             email.setSubject( subject );
             email.setToAddresses( new String[] {UserInfo.getUserEmail()} );
