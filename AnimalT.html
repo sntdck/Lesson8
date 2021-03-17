@@ -1,0 +1,20 @@
+<template>
+   
+    <template if:true={animals}>
+        
+        <div class="slds-m-around_medium" align="center">
+            <lightning-button label="Save Animal" title="Save animal" onclick = {saveSelected} > </lightning-button>
+        </div>
+
+        <div class="slds-m-around_medium">
+            <lightning-datatable
+            key-field="Id"
+            data={animals}
+            columns={columns}
+            >
+            </lightning-datatable>    
+        </div>
+
+    </template>
+
+</template>
